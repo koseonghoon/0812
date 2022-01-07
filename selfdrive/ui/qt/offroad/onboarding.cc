@@ -98,13 +98,13 @@ void TermsPage::showEvent(QShowEvent *event) {
   buttons->setSpacing(45);
   main_layout->addLayout(buttons);
 
-  //QPushButton *decline_btn = new QPushButton("Decline");
-  QPushButton *decline_btn = new QPushButton("거절");
+  QPushButton *decline_btn = new QPushButton("Decline");
+  //QPushButton *decline_btn = new QPushButton("거절");
   buttons->addWidget(decline_btn);
   QObject::connect(decline_btn, &QPushButton::clicked, this, &TermsPage::declinedTerms);
 
-  //accept_btn = new QPushButton("Scroll to accept");
-  accept_btn = new QPushButton("스크롤하세요");
+  accept_btn = new QPushButton("Scroll to accept");
+  //accept_btn = new QPushButton("스크롤하세요");
   accept_btn->setEnabled(false);
   accept_btn->setStyleSheet(R"(
     QPushButton {
@@ -134,8 +134,8 @@ void DeclinePage::showEvent(QShowEvent *event) {
   main_layout->setSpacing(40);
 
   QLabel *text = new QLabel(this);
-  //text->setText("You must accept the Terms and Conditions in order to use openpilot.");
-  text->setText("오픈파일럿을 사용하려면 약관에 동의해야 합니다!");
+  text->setText("You must accept the Terms and Conditions in order to use openpilot.");
+  //text->setText("오픈파일럿을 사용하려면 약관에 동의해야 합니다!");
   text->setStyleSheet(R"(font-size: 80px; font-weight: 300; margin: 200px;)");
   text->setWordWrap(true);
   main_layout->addWidget(text, 0, Qt::AlignCenter);

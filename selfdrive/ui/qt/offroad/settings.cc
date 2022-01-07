@@ -36,10 +36,10 @@ TogglesPanel::TogglesPanel(SettingsWindow *parent) : ListWidget(parent) {
   std::vector<std::tuple<QString, QString, QString, QString>> toggles{
     {
       "OpenpilotEnabledToggle",
-      //"Enable openpilot",
-      //"Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.",
-      "오픈파일럿 사용",
-      "오픈파일럿을 사용하여 조향보조 기능을 사용합니다. 항상 핸들을 잡고 도로를 주시하세요.",
+      "Enable openpilot",
+      "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.",
+      //"오픈파일럿 사용",
+      //"오픈파일럿을 사용하여 조향보조 기능을 사용합니다. 항상 핸들을 잡고 도로를 주시하세요.",
       "../assets/offroad/icon_openpilot.png",
     },
 /*
@@ -52,42 +52,42 @@ TogglesPanel::TogglesPanel(SettingsWindow *parent) : ListWidget(parent) {
 */
     {
       "IsMetric",
-      //"Use Metric System",
-      //"Display speed in km/h instead of mph.",
-      "미터법 사용",
-      "주행속도 표시를 ㎞/h로 변경합니다",
+      "Use Metric System",
+      "Display speed in km/h instead of mph.",
+      //"미터법 사용",
+      //"주행속도 표시를 ㎞/h로 변경합니다",
       "../assets/offroad/icon_metric.png",
     },
     {
       "CommunityFeaturesToggle",
-      //"Enable Community Features",
-      //"Use features, such as community supported hardware, from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features",
-      "커뮤니티 기능 사용",
-      "커뮤니티기능은 comma.ai에서 공식적으로 지원하는 기능이 아니므로 사용시 주의하세요.",
+      "Enable Community Features",
+      "Use features, such as community supported hardware, from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features",
+      //"커뮤니티 기능 사용",
+      //"커뮤니티기능은 comma.ai에서 공식적으로 지원하는 기능이 아니므로 사용시 주의하세요.",
       "../assets/offroad/icon_discord.png",
     },
     {
       "IsLdwEnabled",
-      //"Enable Lane Departure Warnings",
-      //"Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).",
-      "차선이탈 경보 사용",
-      "40㎞/h 이상의 속도로 주행시 방향지시등 조작없이 차선을 이탈하면 차선이탈경보를 보냅니다. (오픈파일럿 비활성상태에서만 사용됩니다)",
+      "Enable Lane Departure Warnings",
+      "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).",
+      //"차선이탈 경보 사용",
+      //"40㎞/h 이상의 속도로 주행시 방향지시등 조작없이 차선을 이탈하면 차선이탈경보를 보냅니다. (오픈파일럿 비활성상태에서만 사용됩니다)",
       "../assets/offroad/icon_ldws.png",
     },
     {
      "AutoLaneChangeEnabled",
-     //"Enable AutoLaneChange",
-     //"Operation of the turn signal at 60㎞/h speed will result in a short change of the vehicle",
-     "자동 차선변경 사용",
-     "60㎞/h 이상의 속도로 주행시 방향지시등을 작동하면 잠시후 자동차선변경을 수행합니다. 안전한 사용을위해 후측방감지기능이 있는 차량만 사용하시기바랍니다.",
+     "Enable AutoLaneChange",
+     "Operation of the turn signal at 60㎞/h speed will result in a short change of the vehicle",
+     //"자동 차선변경 사용",
+     //"60㎞/h 이상의 속도로 주행시 방향지시등을 작동하면 잠시후 자동차선변경을 수행합니다. 안전한 사용을위해 후측방감지기능이 있는 차량만 사용하시기바랍니다.",
      "../assets/offroad/icon_lca.png",
     },
     {
       "UploadRaw",
-      //"Upload Raw Logs",
-      //"Upload full logs and full resolution video by default while on Wi-Fi. If not enabled, individual logs can be marked for upload at useradmin.comma.ai.",
-      "주행로그 업로드 사용",
-      "주행로그를 업로드합니다. [ connect.comma.ai/useradmin ] 에서 확인할수있습니다",
+      "Upload Raw Logs",
+      "Upload full logs and full resolution video by default while on Wi-Fi. If not enabled, individual logs can be marked for upload at useradmin.comma.ai.",
+      //"주행로그 업로드 사용",
+      //"주행로그를 업로드합니다. [ connect.comma.ai/useradmin ] 에서 확인할수있습니다",
       "../assets/offroad/icon_network.png",
     },
 /*
@@ -143,30 +143,30 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
   addItem(new LabelControl("Serial", params.get("HardwareSerial").c_str()));
 
   // offroad-only buttons
-  //auto dcamBtn = new ButtonControl("Driver Camera", "PREVIEW",
-  //                                 "Preview the driver facing camera to help optimize device mounting position for best driver monitoring experience. (vehicle must be off)");
-  auto dcamBtn = new ButtonControl("운전자 모니터링 카메라 미리보기", "실행",
-                                   "운전자 모니터링 카메라를 미리보고 최적의 장착위치를 찾아보세요.");
+  auto dcamBtn = new ButtonControl("Driver Camera", "PREVIEW",
+                                   "Preview the driver facing camera to help optimize device mounting position for best driver monitoring experience. (vehicle must be off)");
+  //auto dcamBtn = new ButtonControl("운전자 모니터링 카메라 미리보기", "실행",
+  //                                 "운전자 모니터링 카메라를 미리보고 최적의 장착위치를 찾아보세요.");
   connect(dcamBtn, &ButtonControl::clicked, [=]() { emit showDriverView(); });
   addItem(dcamBtn);
 
-  //auto resetCalibBtn = new ButtonControl("Reset Calibration", "RESET", " ");
-  auto resetCalibBtn = new ButtonControl("캘리브레이션 초기화", "실행", " ");
+  auto resetCalibBtn = new ButtonControl("Reset Calibration", "RESET", " ");
+  //auto resetCalibBtn = new ButtonControl("캘리브레이션 초기화", "실행", " ");
   connect(resetCalibBtn, &ButtonControl::showDescription, this, &DevicePanel::updateCalibDescription);
   connect(resetCalibBtn, &ButtonControl::clicked, [&]() {
-    //if (ConfirmationDialog::confirm("Are you sure you want to reset calibration?", this)) {
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+    if (ConfirmationDialog::confirm("Are you sure you want to reset calibration?", this)) {
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
       params.remove("CalibrationParams");
     }
   });
   addItem(resetCalibBtn);
 
   if (!params.getBool("Passive")) {
-    //auto retrainingBtn = new ButtonControl("Review Training Guide", "REVIEW", "Review the rules, features, and limitations of openpilot");
-    auto retrainingBtn = new ButtonControl("트레이닝 가이드", "실행", "");
+    auto retrainingBtn = new ButtonControl("Review Training Guide", "REVIEW", "Review the rules, features, and limitations of openpilot");
+    //auto retrainingBtn = new ButtonControl("트레이닝 가이드", "실행", "");
     connect(retrainingBtn, &ButtonControl::clicked, [=]() {
-      //if (ConfirmationDialog::confirm("Are you sure you want to review the training guide?", this)) {
-      if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+      if (ConfirmationDialog::confirm("Are you sure you want to review the training guide?", this)) {
+      //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
         emit reviewTrainingGuide();
       }
     });
@@ -196,13 +196,13 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
 
   // addfunc button
   const char* addfunc = "sh /data/openpilot/scripts/addfunc.sh";
-  //QPushButton *addfuncbtn = new QPushButton("Add Func");
-  QPushButton *addfuncbtn = new QPushButton("추가기능");
+  QPushButton *addfuncbtn = new QPushButton("Add Func");
+  //QPushButton *addfuncbtn = new QPushButton("추가기능");
   addfuncbtn->setStyleSheet("height: 120px;border-radius: 15px;background-color: #393939;");
   reset_layout->addWidget(addfuncbtn);
   QObject::connect(addfuncbtn, &QPushButton::released, [=]() {
-    //if (ConfirmationDialog::confirm("Process?", this)){
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+    if (ConfirmationDialog::confirm("Process?", this)){
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
       std::system(addfunc);
       emit closeSettings();
       QTimer::singleShot(1000, []() {
@@ -212,13 +212,13 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
   });
 
   // reset calibration button
-  //QPushButton *reset_calib_btn = new QPushButton("Reset Calibration,LiveParameters");
-  QPushButton *reset_calib_btn = new QPushButton("Calibration,LiveParameters 리셋");
+  QPushButton *reset_calib_btn = new QPushButton("Reset Calibration,LiveParameters");
+  //QPushButton *reset_calib_btn = new QPushButton("Calibration,LiveParameters 리셋");
   reset_calib_btn->setStyleSheet("height: 120px;border-radius: 15px;background-color: #393939;");
   reset_layout->addWidget(reset_calib_btn);
   QObject::connect(reset_calib_btn, &QPushButton::released, [=]() {
-    //if (ConfirmationDialog::confirm("Are you sure you want to reset calibration and live params?", this)) {
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+    if (ConfirmationDialog::confirm("Are you sure you want to reset calibration and live params?", this)) {
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
       Params().remove("CalibrationParams");
       Params().remove("LiveParameters");
       emit closeSettings();
@@ -234,8 +234,8 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
   power_layout->setSpacing(30);
 
   // softreset button
-  //QPushButton *restart_openpilot_btn = new QPushButton("Soft Reset");
-  QPushButton *restart_openpilot_btn = new QPushButton("재시작");
+  QPushButton *restart_openpilot_btn = new QPushButton("Soft Reset");
+  //QPushButton *restart_openpilot_btn = new QPushButton("재시작");
   restart_openpilot_btn->setObjectName("restart_openpilot_btn");
   power_layout->addWidget(restart_openpilot_btn);
   QObject::connect(restart_openpilot_btn, &QPushButton::released, [=]() {
@@ -245,14 +245,14 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
     });
   });
 
-  //QPushButton *reboot_btn = new QPushButton("Reboot");
-  QPushButton *reboot_btn = new QPushButton("재부팅");
+  QPushButton *reboot_btn = new QPushButton("Reboot");
+  //QPushButton *reboot_btn = new QPushButton("재부팅");
   reboot_btn->setObjectName("reboot_btn");
   power_layout->addWidget(reboot_btn);
   QObject::connect(reboot_btn, &QPushButton::clicked, this, &DevicePanel::reboot);
 
-  //QPushButton *poweroff_btn = new QPushButton("Power Off");
-  QPushButton *poweroff_btn = new QPushButton("종료");
+  QPushButton *poweroff_btn = new QPushButton("Power Off");
+  //QPushButton *poweroff_btn = new QPushButton("종료");
   poweroff_btn->setObjectName("poweroff_btn");
   power_layout->addWidget(poweroff_btn);
   QObject::connect(poweroff_btn, &QPushButton::clicked, this, &DevicePanel::poweroff);
@@ -274,9 +274,9 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
 
 void DevicePanel::updateCalibDescription() {
   QString desc =
-      //"openpilot requires the device to be mounted within 4° left or right and "
-      //"within 5° up or down. openpilot is continuously calibrating, resetting is rarely required.";
-      "범위 (pitch) ↕ 5˚ (yaw) ↔ 4˚이내";
+      "openpilot requires the device to be mounted within 4° left or right and "
+      "within 5° up or down. openpilot is continuously calibrating, resetting is rarely required.";
+      //"범위 (pitch) ↕ 5˚ (yaw) ↔ 4˚이내";
   std::string calib_bytes = Params().get("CalibrationParams");
   if (!calib_bytes.empty()) {
     try {
@@ -286,16 +286,16 @@ void DevicePanel::updateCalibDescription() {
       if (calib.getCalStatus() != 0) {
         double pitch = calib.getRpyCalib()[1] * (180 / M_PI);
         double yaw = calib.getRpyCalib()[2] * (180 / M_PI);
-        //desc += QString(" Your device is pointed %1° %2 and %3° %4.")
-        //           .arg(QString::number(std::abs(pitch), 'g', 1), pitch > 0 ? "up" : "down",
-        //                QString::number(std::abs(yaw), 'g', 1), yaw > 0 ? "right" : "left");
-        desc += QString("\n현재 캘리브레이션된 위치는 [ %2 %1° / %4 %3° ] 입니다.")
-                   .arg(QString::number(std::abs(pitch), 'g', 1), pitch > 0 ? "↑" : "↓",
-                        QString::number(std::abs(yaw), 'g', 1), yaw > 0 ? "→" : "←");
+        desc += QString(" Your device is pointed %1° %2 and %3° %4.")
+                   .arg(QString::number(std::abs(pitch), 'g', 1), pitch > 0 ? "up" : "down",
+                        QString::number(std::abs(yaw), 'g', 1), yaw > 0 ? "right" : "left");
+        //desc += QString("\n현재 캘리브레이션된 위치는 [ %2 %1° / %4 %3° ] 입니다.")
+        //           .arg(QString::number(std::abs(pitch), 'g', 1), pitch > 0 ? "↑" : "↓",
+        //                QString::number(std::abs(yaw), 'g', 1), yaw > 0 ? "→" : "←");
       }
     } catch (kj::Exception) {
-      //qInfo() << "invalid CalibrationParams";
-      qInfo() << "캘리브레이션 상태가 유효하지않습니다";
+      qInfo() << "invalid CalibrationParams";
+      //qInfo() << "캘리브레이션 상태가 유효하지않습니다";
     }
   }
   qobject_cast<ButtonControl *>(sender())->setDescription(desc);
@@ -303,31 +303,31 @@ void DevicePanel::updateCalibDescription() {
 
 void DevicePanel::reboot() {
   if (QUIState::ui_state.status == UIStatus::STATUS_DISENGAGED) {
-    //if (ConfirmationDialog::confirm("Are you sure you want to reboot?", this)) {
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
-      // Check engaged again in case it changed while the dialog was open
+    if (ConfirmationDialog::confirm("Are you sure you want to reboot?", this)) {
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+       //Check engaged again in case it changed while the dialog was open
       if (QUIState::ui_state.status == UIStatus::STATUS_DISENGAGED) {
         Params().putBool("DoReboot", true);
       }
     }
   } else {
-    //ConfirmationDialog::alert("Disengage to Reboot", this);
-    ConfirmationDialog::alert("오픈파일럿 해제후 재부팅", this);
+    ConfirmationDialog::alert("Disengage to Reboot", this);
+    //ConfirmationDialog::alert("오픈파일럿 해제후 재부팅", this);
   }
 }
 
 void DevicePanel::poweroff() {
   if (QUIState::ui_state.status == UIStatus::STATUS_DISENGAGED) {
-    //if (ConfirmationDialog::confirm("Are you sure you want to power off?", this)) {
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
-      // Check engaged again in case it changed while the dialog was open
+    if (ConfirmationDialog::confirm("Are you sure you want to power off?", this)) {
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+       //Check engaged again in case it changed while the dialog was open
       if (QUIState::ui_state.status == UIStatus::STATUS_DISENGAGED) {
         Params().putBool("DoShutdown", true);
       }
     }
   } else {
-    //ConfirmationDialog::alert("Disengage to Power Off", this);
-    ConfirmationDialog::alert("오픈파일럿 해제후 종료", this);
+    ConfirmationDialog::alert("Disengage to Power Off", this);
+    //ConfirmationDialog::alert("오픈파일럿 해제후 종료", this);
   }
 }
 
@@ -350,9 +350,11 @@ SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
   });
 
 
-  auto uninstallBtn = new ButtonControl(getBrand() + "제거", "실행");
+  //auto uninstallBtn = new ButtonControl(getBrand() + "제거", "실행");
+  auto uninstallBtn = new ButtonControl(getBrand() + "Uninstall", "RUN");
   connect(uninstallBtn, &ButtonControl::clicked, [&]() {
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", this)) {
+    if (ConfirmationDialog::confirm("Process?", this)) {
       params.putBool("DoUninstall", true);
     }
   });
@@ -405,18 +407,18 @@ QWidget * network_panel(QWidget * parent) {
 
   ListWidget *list = new ListWidget();
   list->setSpacing(30);
-  //auto wifiBtn = new ButtonControl("WiFi Settings", "OPEN");
-  auto wifiBtn = new ButtonControl("\U0001f4f6 WiFi 설정", "열기");
+  auto wifiBtn = new ButtonControl("WiFi Settings", "OPEN");
+  //auto wifiBtn = new ButtonControl("\U0001f4f6 WiFi 설정", "열기");
   QObject::connect(wifiBtn, &ButtonControl::clicked, [=]() { HardwareEon::launch_wifi(); });
   list->addItem(wifiBtn);
 
-  //auto tetheringBtn = new ButtonControl("Tethering Settings", "OPEN");
-  auto tetheringBtn = new ButtonControl("\U0001f4f6 테더링 설정", "열기");
+  auto tetheringBtn = new ButtonControl("Tethering Settings", "OPEN");
+  //auto tetheringBtn = new ButtonControl("\U0001f4f6 테더링 설정", "열기");
   QObject::connect(tetheringBtn, &ButtonControl::clicked, [=]() { HardwareEon::launch_tethering(); });
   list->addItem(tetheringBtn);
 
-  //auto androidBtn = new ButtonControl("\U00002699 Android Setting", "OPEN");
-  auto androidBtn = new ButtonControl("\U00002699 안드로이드 설정", "열기");
+  auto androidBtn = new ButtonControl("\U00002699 Android Setting", "OPEN");
+  //auto androidBtn = new ButtonControl("\U00002699 안드로이드 설정", "열기");
   QObject::connect(androidBtn, &ButtonControl::clicked, [=]() { HardwareEon::launch_setting(); });
   list->addItem(androidBtn);
 
@@ -430,11 +432,11 @@ QWidget * network_panel(QWidget * parent) {
   list->addItem(horizontal_line());
 
   const char* gitpull = "sh /data/openpilot/scripts/gitpull.sh";
-  //auto gitpullbtn = new ButtonControl("Git Fetch and Reset", "RUN");
-  auto gitpullbtn = new ButtonControl("Git Fetch and Reset", "실행");
+  auto gitpullbtn = new ButtonControl("Git Fetch and Reset", "RUN");
+  //auto gitpullbtn = new ButtonControl("Git Fetch and Reset", "실행");
   QObject::connect(gitpullbtn, &ButtonControl::clicked, [=]() {
-    //if (ConfirmationDialog::confirm("Process?", w)){
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
+    if (ConfirmationDialog::confirm("Process?", w)){
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
       std::system(gitpull);
       QTimer::singleShot(1000, []() { Hardware::reboot(); });
     }
@@ -442,22 +444,22 @@ QWidget * network_panel(QWidget * parent) {
   list->addItem(gitpullbtn);
 
   const char* realdata_clear = "sh /data/openpilot/scripts/realdataclear.sh";
-  //auto realdataclearbtn = new ButtonControl("Driving log Delete", "RUN");
-  auto realdataclearbtn = new ButtonControl("주행로그 삭제", "실행");
+  auto realdataclearbtn = new ButtonControl("Driving log Delete", "RUN");
+  //auto realdataclearbtn = new ButtonControl("주행로그 삭제", "실행");
   QObject::connect(realdataclearbtn, &ButtonControl::clicked, [=]() {
-    //if (ConfirmationDialog::confirm("Process?", w)){
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", w)) {
+    if (ConfirmationDialog::confirm("Process?", w)){
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", w)) {
       std::system(realdata_clear);
     }
   });
   list->addItem(realdataclearbtn);
 
   const char* panda_flash = "sh /data/openpilot/panda/board/flash.sh";
-  //auto pandaflashbtn = new ButtonControl("Panda Firmware Flash", "RUN");
-  auto pandaflashbtn = new ButtonControl("판다 펌웨어 플래싱", "실행");
+  auto pandaflashbtn = new ButtonControl("Panda Firmware Flash", "RUN");
+  //auto pandaflashbtn = new ButtonControl("판다 펌웨어 플래싱", "실행");
   QObject::connect(pandaflashbtn, &ButtonControl::clicked, [=]() {
-    //if (ConfirmationDialog::confirm("Process?", w)){
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
+    if (ConfirmationDialog::confirm("Process?", w)){
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
       std::system(panda_flash);
       QTimer::singleShot(1000, []() { Hardware::reboot(); });
     }
@@ -465,11 +467,11 @@ QWidget * network_panel(QWidget * parent) {
   list->addItem(pandaflashbtn);
 
   const char* panda_recover = "sh /data/openpilot/panda/board/recover.sh";
-  //auto pandarecoverbtn = new ButtonControl("Panda Firmware Recover", "RUN");
-  auto pandarecoverbtn = new ButtonControl("판다 펌웨어 복구", "실행");
+  auto pandarecoverbtn = new ButtonControl("Panda Firmware Recover", "RUN");
+  //auto pandarecoverbtn = new ButtonControl("판다 펌웨어 복구", "실행");
   QObject::connect(pandarecoverbtn, &ButtonControl::clicked, [=]() {
-    //if (ConfirmationDialog::confirm("Process?", w)){
-    if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
+    if (ConfirmationDialog::confirm("Process?", w)){
+    //if (ConfirmationDialog::confirm("실행하시겠습니까?", w)){
       std::system(panda_recover);
       QTimer::singleShot(1000, []() { Hardware::reboot(); });
     }
@@ -548,16 +550,16 @@ SettingsWindow::SettingsWindow(QWidget *parent) : QFrame(parent) {
   QObject::connect(device, &DevicePanel::closeSettings, this, &SettingsWindow::closeSettings);
 
   QList<QPair<QString, QWidget *>> panels = {
-    //{"Device", device},
-    //{"Network", network_panel(this)},
-    //{"Toggles", new TogglesPanel(this)},
-    //{"Software", new SoftwarePanel(this)},
-    //{"Community", new CommunityPanel(this)},
-    {"장치", device},
-    {"설정", network_panel(this)},
-    {"토글", new TogglesPanel(this)},
-    {"정보", new SoftwarePanel(this)},
-    {"커뮤니티", new CommunityPanel(this)},
+    {"Device", device},
+    {"Network", network_panel(this)},
+    {"Toggles", new TogglesPanel(this)},
+    {"Software", new SoftwarePanel(this)},
+    {"Community", new CommunityPanel(this)},
+    //{"장치", device},
+    //{"설정", network_panel(this)},
+    //{"토글", new TogglesPanel(this)},
+    //{"정보", new SoftwarePanel(this)},
+    //{"커뮤니티", new CommunityPanel(this)},
   };
 
 #ifdef ENABLE_MAPS
@@ -640,8 +642,8 @@ CommunityPanel::CommunityPanel(QWidget* parent) : QWidget(parent) {
 
   QString selected = QString::fromStdString(Params().get("SelectedCar"));
 
-  //QPushButton* selectCarBtn = new QPushButton(selected.length() ? selected : "Select your car");
-  QPushButton* selectCarBtn = new QPushButton(selected.length() ? selected : "차량을 선택하세요");
+  QPushButton* selectCarBtn = new QPushButton(selected.length() ? selected : "Select your car");
+  //QPushButton* selectCarBtn = new QPushButton(selected.length() ? selected : "차량을 선택하세요");
   selectCarBtn->setObjectName("selectCarBtn");
   selectCarBtn->setStyleSheet("margin-right: 30px;");
   //selectCarBtn->setFixedSize(350, 100);
@@ -689,22 +691,22 @@ CommunityPanel::CommunityPanel(QWidget* parent) : QWidget(parent) {
   QList<ParamControl*> toggles;
 
   toggles.append(new ParamControl("PutPrebuilt", "Prebuilt Enable",
-                                  //"Create prebuilt files to speed bootup",
-                                  "Prebuilt 파일을 생성하며 부팅속도를 향상시킵니다.",
+                                  "Create prebuilt files to speed bootup",
+                                  //"Prebuilt 파일을 생성하며 부팅속도를 향상시킵니다.",
                                   "../assets/offroad/icon_addon.png", this));
 #ifdef QCOM
   toggles.append(new ParamControl("ShutdowndDisable", "Shutdownd Disable",
-                                  //"Disable Shutdownd",
-                                  "Shutdownd (시동 off 5분) 자동종료를 사용하지않습니다. (batteryless 기종)",
+                                  "Disable Shutdownd",
+                                  //"Shutdownd (시동 off 5분) 자동종료를 사용하지않습니다. (batteryless 기종)",
                                   "../assets/offroad/icon_addon.png", this));
 #endif
   toggles.append(new ParamControl("LoggerDisable", "Logger Disable",
-                                  //"Disable Logger is Reduce system load",
-                                  "Logger 프로세스를 종료하여 시스템 부하를 줄입니다.",
+                                  "Disable Logger is Reduce system load",
+                                  //"Logger 프로세스를 종료하여 시스템 부하를 줄입니다.",
                                   "../assets/offroad/icon_addon.png", this));
   toggles.append(new ParamControl("NewRadarInterface", "New radar interface Enable",
-                                  //"New radar interface Enable",
-                                  "scc 레이더 배선개조없이 사용가능한 일부차종을 위한 옵션입니다",
+                                  "New radar interface Enable",
+                                  //"scc 레이더 배선개조없이 사용가능한 일부차종을 위한 옵션입니다",
                                   "../assets/offroad/icon_road.png", this));
   for(ParamControl *toggle : toggles) {
     if(main_layout->count() != 0) {
