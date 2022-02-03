@@ -12,13 +12,13 @@ ENABLE_INC_LANE_PROB = True
 TRAJECTORY_SIZE = 33
 # camera offset is meters from center car to camera
 if EON:
-  CAMERA_OFFSET = 0.06
+  CAMERA_OFFSET = 0.07
   PATH_OFFSET = 0.0
 elif TICI:
   CAMERA_OFFSET = -0.04
   PATH_OFFSET = -0.04
 else:
-  CAMERA_OFFSET = 0.0
+  CAMERA_OFFSET = 0.07
   PATH_OFFSET = 0.0
 
 class LanePlanner:
@@ -29,7 +29,7 @@ class LanePlanner:
     self.rll_y = np.zeros((TRAJECTORY_SIZE,))
     self.lane_width_estimate = FirstOrderFilter(3.7, 9.95, DT_MDL)
     self.lane_width_certainty = FirstOrderFilter(1.0, 0.95, DT_MDL)
-    self.lane_width = 3.7
+    self.lane_width = 2.7
 
     self.lll_prob = 0.
     self.rll_prob = 0.
