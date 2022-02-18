@@ -362,7 +362,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
       "브레이크!",
       "추돌 위험",
       AlertStatus.critical, AlertSize.full,
-      Priority.HIGHEST, VisualAlert.fcw, AudibleAlert.warningSoft, 2.),
+      Priority.HIGHEST, VisualAlert.fcw, AudibleAlert.none, 2.),
   },
 
   EventName.ldw: {
@@ -372,7 +372,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
       "핸들을 잡아주세요",
       "차선이탈 감지됨",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.ldw, AudibleAlert.prompt, 3.),
+      Priority.LOW, VisualAlert.ldw, AudibleAlert.none, 3.),
   },
 
   # ********** events only containing alerts that display while engaged **********
