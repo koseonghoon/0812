@@ -40,8 +40,8 @@ DriveStats::DriveStats(QWidget* parent) : QFrame(parent) {
     grid_layout->addWidget(labels.distance_unit = newLabel(getDistanceUnit(), "unit"), row + 2, 2, Qt::AlignCenter);
     grid_layout->addWidget(new QLabel("────────────────────────────────"), 8, 0, 1, 3, Qt::AlignCenter);
 
-    grid_layout->addWidget(new QLabel("━ crwusiz branch ━"), 9, 0, 1, 3, Qt::AlignCenter);
-    grid_layout->addWidget(new QLabel("「 Easy Driving \U0001f60b 」"), 11, 0, 1, 3, Qt::AlignCenter);
+    grid_layout->addWidget(new QLabel("━ Ko Seong Hoon branch ━"), 9, 0, 1, 3, Qt::AlignCenter);
+    grid_layout->addWidget(new QLabel("「 Safety Driving \U0001f60b 」"), 11, 0, 1, 3, Qt::AlignCenter);
     main_layout->addLayout(grid_layout);
   };
 
