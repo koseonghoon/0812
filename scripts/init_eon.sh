@@ -44,12 +44,12 @@ if [ ! -f "/data/BOOTLOGO" ]; then
     echo =================================================================
 fi
 
-echo =================================================================
-echo change public GithubSshkeys and force ssh enable
-cp -f /data/openpilot/installer/fonts/GithubSshKeys /data/params/d/GithubSshKeys;
-chmod 600 /data/params/d/GithubSshKeys
-echo -n "Public Key" > /data/params/d/GithubUsername;
-setprop persist.neos.ssh 1
-echo =================================================================
+#echo =================================================================
+#echo change public GithubSshkeys and force ssh enable
+#cp -f /data/openpilot/installer/fonts/GithubSshKeys /data/params/d/GithubSshKeys;
+#chmod 600 /data/params/d/GithubSshKeys
+#echo -n "Public Key" > /data/params/d/GithubUsername;
+#setprop persist.neos.ssh 1
+#echo =================================================================
 
 exec ./launch_chffrplus.sh
